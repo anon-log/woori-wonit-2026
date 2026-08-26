@@ -38,3 +38,16 @@ __진하게__
     - 하위제목
         - 더 하위제목
            tab 버튼으로 들여씁니다.
+
+---
+```python
+print("hello world!")
+```
+
+```bash
+git init
+```
+
+```javascript
+alert("hello")
+```
