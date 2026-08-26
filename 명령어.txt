@@ -13,3 +13,7 @@ git config --global user.name "YeonjiKim0316"
 git add README.md 
 git commit -m "first commit"
 git push -u origin main
+
+
+# 로컬 레포지토리에 원격 레포지토의 현재 상태를 반영할 때
+git pull origin main
