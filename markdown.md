@@ -51,3 +51,10 @@ git init
 ```javascript
 alert("hello")
 ```
+---
+표
+
+|name|age|
+|----|---|
+|김연지|20|
+|신짱구|5|
