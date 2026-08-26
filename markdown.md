@@ -63,4 +63,7 @@ alert("hello")
 [네이버로 가기](https://naver.com)
 
 - 이미지
-![이미지가 깨졌을 때 설명](https://upload.wikimedia.org/wikipedia/ko/thumb/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png)
+![이미지가 깨졌을 때 설명](./신짱구.png)
+
+- 앞으로 데이터를 다룰 때 기왕이면 원본을 어딘가 우리 서버에 넣으세요. 의존성 문제.
+- 개발은 로컬에서 하지만 실제 서비스는 온라인에서 이루어집니다. 상대경로를 지향하세요.
