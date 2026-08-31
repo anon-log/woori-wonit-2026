@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="김연지의 포트폴리오 키워드">
+  <title>키워드 | 김연지 Portfolio</title>
+
+  <style>
+    :root {
+      --ink: #173042;
+      --muted: #587080;
+      --paper: #f7fbf8;
+      --mint: #d9f3e6;
+      --green: #087f5b;
+      --line: #cde4d8;
+      --yellow: #ffcf56;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    a { color: inherit; }
+
+    .content {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--green);
+      font: 700 0.8rem/1.2 Arial, sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 36px;
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 1;
+    }
+
+    .keyword-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .keyword-list li {
+      min-height: 180px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-top: 6px solid var(--yellow);
+      background: white;
+      font-size: 1.5rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner p {
+      margin: 0;
+      color: var(--muted);
+      font: 0.85rem/1.5 Arial, sans-serif;
+    }
+
+    @media (max-width: 700px) {
+      .keyword-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <nav id="site-navigation" aria-label="주요 메뉴"></nav>
+    </header>
+
+    <main class="content">
+      <p class="eyebrow">Three keywords / Yeonji Kim</p>
+      <h1>나를 소개하는<br>3가지 키워드</h1>
+
+      <section aria-labelledby="keyword-title">
+        <h2 id="keyword-title">My keywords</h2>
+
+        <ul class="keyword-list">
+          <li>IT강사</li>
+          <li>개발자</li>
+          <li>테크니컬 에디터</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p>© 2026 Yeonji Kim. Built while learning.</p>
+        <a
+          href="https://github.com/YeonjiKim0316/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub 방문하기
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module">
+    import React from "https://esm.sh/react@latest";
+    import { createRoot } from "https://esm.sh/react-dom@latest/client";
+    import {
+      AppBar,
+      Toolbar,
+      Typography,
+      Button,
+      Stack
+    } from "https://esm.sh/@mui/material@latest?bundle";
+
+    function Navigation() {
+      return React.createElement(
+        AppBar,
+        {
+          position: "static",
+          color: "transparent",
+          elevation: 0,
+          component: "div",
+          sx: {
+            borderBottom: "1px solid #cde4d8",
+            backgroundColor: "rgba(247, 251, 248, 0.92)"
+          }
+        },
+        React.createElement(
+          Toolbar,
+          {
+            component: "div",
+            sx: {
+              maxWidth: 1120,
+              width: "100%",
+              mx: "auto",
+              px: { xs: 2, sm: 3 },
+              justifyContent: "space-between"
+            }
+          },
+          React.createElement(
+            Typography,
+            {
+              component: "span",
+              variant: "h6",
+              sx: {
+                color: "#087f5b",
+                fontWeight: 800
+              }
+            },
+            "YK."
+          ),
+          React.createElement(
+            Stack,
+            {
+              component: "span",
+              direction: "row",
+              spacing: 1
+            },
+            React.createElement(
+              Button,
+              {
+                component: "a",
+                href: "index.html",
+                color: "inherit"
+              },
+              "소개"
+            ),
+            React.createElement(
+              Button,
+              {
+                component: "a",
+                href: "keyword.html",
+                color: "inherit"
+              },
+              "키워드"
+            )
+          )
+        )
+      );
+    }
+
+    createRoot(
+      document.getElementById("site-navigation")
+    ).render(React.createElement(Navigation));
+  </script>
+</body>
+</html>
