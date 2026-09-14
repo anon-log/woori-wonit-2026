@@ -17,5 +17,38 @@
             <li>철수</li>
         </ul>
     </div>
+
+    <script>
+        // document.getElementById(아이디명) : html 하나에 1개
+        // document.getElementsByClassName(클래스명) : html 안에 있는 여러 위치를 한꺼번에 가져옴
+        // document.getElementsByTagName(태그명)
+        // document.querySelector(뭐라도 가져올 수 있음): #id명, .클래스명, 그냥태그명 
+        
+        // myfun()을 클릭하면 -> class가 title인 모든 위치의 innerHTML이 '바뀌었음'
+        // 반복문 
+        // querySelector
+        function myfun() {
+           const title = document.getElementsByClassName('title')
+           // 최초의 웹사이트는 정보를 전달하기 위해 만들어져서 innerText로 충분, 
+           // 인터랙티브한 코드를 끼워넣기 위해 innerHTML 
+           for (let i = 0; i < title.length ; i++) {
+            document.getElementsByClassName('title')[i].innerHTML = '바뀜';
+            }
+           //  document.querySelector로 가져오면 첫번째 값만 가져와짐. 그래서 여러개를 동시에 가져올 때는
+           // document.querySelectorAll('.title') 
+        }
+
+        // myfunc2() 가 동작하면 아래에 있는 훈이, 철수 자리가 짱구 이미지로 바뀌도록 
+        function myfun2() {
+           // 최초의 웹사이트는 정보를 전달하기 위해 만들어져서 innerText로 충분, 
+           // 인터랙티브한 코드를 끼워넣기 위해 innerHTML
+           // 아래 4개는 모두 같은 자리를 부릅니다.
+           // document.getElementById("three").innerHTML = '<img src="./jjanggu.png" />'; 
+           // document.querySelector('#three').innerHTML = '<img src="./jjanggu.png" />'; 
+           // document.querySelector('ul').innerHTML = '<img src="./jjanggu.png" />';
+           // 복수형이므로 Array의 [0]으로 접근 
+           document.getElementsByTagName('ul')[0].innerHTML = '<img src="./jjanggu.png" />';
+        }
+    </script>
 </body>
 </html>

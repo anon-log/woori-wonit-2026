@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="num">0</h2>
+
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="minus()">
+     <input type="button" value="Reset" onclick="reset()">
+    <script>
+
+    // 중복되는 위치를 count 라는 변수에 담습니다. 
+    // 이후에는 count.해당위치의 속성을 부르면 현재의 값을 조작할 수 있게 됩니다.
+    let count = document.getElementById("num");
+    console.log(count)
+        // reset() 누르면 num 자리가 0으로 초기화 
+    function reset() {
+         count.innerText = 0;
+    }
+    // add() 누를 때마다 count가 1씩 추가
+    function add() {
+       count.innerText++;
+       console.log('😊' + count);
+    }
+
+    // minus()를 누를 때마다 count가 1씩 감소
+    // 값이 0이 되면 더이상 숫자가 줄어들 수 없음 
+    function minus() {
+        if (count.innerText > 0) {
+           count.innerText--;
+        }
+    }
+    </script>
+</body>
+</html>

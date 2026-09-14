@@ -1,0 +1,201 @@
+/* =========================
+   기본 설정
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Noto Sans KR",
+    Arial,
+    sans-serif;
+
+  background-color: #f6f7f9;
+  color: #24292f;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* =========================
+   전체 컨테이너
+========================= */
+
+.container {
+  width: min(900px, 90%);
+  margin: 60px auto;
+}
+
+.site-header {
+  margin-bottom: 0;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.site-nav a {
+  display: block;
+  padding: 8px 14px;
+  color: #24292f;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  background-color: #e9f2ff;
+  color: #0969da;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   Section
+========================= */
+
+.section {
+  background-color: #ffffff;
+  padding: 32px;
+  margin-bottom: 24px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #171717;
+}
+
+
+/* =========================
+   About Me
+========================= */
+
+.about-list {
+  list-style: none;
+}
+
+.about-list li {
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.about-list strong {
+  color: #0969da;
+}
+
+
+/* =========================
+   Skills
+========================= */
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skills li,
+.social-links li {
+  display: flex;
+}
+
+.skills img {
+  height: 28px;
+}
+
+
+/* =========================
+   Connect
+========================= */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+}
+
+.site-footer {
+  margin-top: 0;
+  color: #57606a;
+  text-align: center;
+}
+
+.social-links img {
+  height: 28px;
+  display: block;
+}
+
+
+/* =========================
+   반응형
+========================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 94%;
+    margin: 30px auto;
+  }
+
+  .section {
+    padding: 24px 20px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .about-list li {
+    font-size: 14px;
+  }
+
+}
